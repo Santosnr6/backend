@@ -3,6 +3,7 @@ import loggerMiddleware from './middlewares/logger.js';
 import errorHandlerMiddleware from './middlewares/errorHandler.js';
 import keysRouter from './routing/keys.js';
 import todosRouter from './routing/todos.js';
+import testRouter from './routing/test.js';
 
 const app = express();
 const PORT = 8080;
@@ -14,6 +15,7 @@ app.use(loggerMiddleware);
 // Routes
 app.use('/api/keys', keysRouter);
 app.use('/api/todos', todosRouter);
+app.use('/api/test', testRouter);
 
 app.get('/', (req, res) => {
     res.send('Success');
