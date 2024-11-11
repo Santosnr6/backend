@@ -8,6 +8,7 @@ import 'dotenv/config';
 
 const app = express();
 const PORT = process.env.PORT_NR;
+console.log('PORT:', PORT);
 
 // Middlewares
 app.use(express.json());
