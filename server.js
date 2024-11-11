@@ -4,9 +4,10 @@ import errorHandlerMiddleware from './middlewares/errorHandler.js';
 import keysRouter from './routing/keys.js';
 import todosRouter from './routing/todos.js';
 import testRouter from './routing/test.js';
+import 'dotenv/config';
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT_NR;
 
 // Middlewares
 app.use(express.json());
